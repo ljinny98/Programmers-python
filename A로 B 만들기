@@ -1,0 +1,7 @@
+def solution(before, after):
+    A = ''.join(sorted(before))
+    B = ''.join(sorted(after))
+    if A == B:
+        return 1
+    else:
+        return 0
