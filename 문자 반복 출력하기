@@ -1,0 +1,8 @@
+def solution(my_string, n):
+    for k in my_string:
+        my_string = my_string.replace(k,k*3)
+    return my_string
+    
+#이렇게 하면 될줄 알았는데
+#실행결과
+#실행한 결괏값 "hhheeellllllllllllllllllooo"이 기댓값 "hhheeellllllooo"과 다릅니다.
