@@ -1,0 +1,5 @@
+def solution(my_string):
+    V = ('a,e,i,o,u')
+    for k in V:
+        my_string = my_string.replace(k,"")
+    return my_string
