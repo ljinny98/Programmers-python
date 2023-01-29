@@ -1,0 +1,8 @@
+def solution(array, n):
+    answer = []
+    for k in array:
+        if k == n:
+            answer.append(k)
+        else:
+            pass
+    return len(answer)
