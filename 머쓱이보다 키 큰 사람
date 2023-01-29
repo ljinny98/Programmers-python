@@ -1,0 +1,8 @@
+def solution(array, height):
+    answer = []
+    for n in array:
+        if n >height:
+            answer.append(n)
+        else:
+            pass
+    return len(answer)
