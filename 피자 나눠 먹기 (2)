@@ -1,0 +1,14 @@
+def solution(n):
+    num1 = []
+    num2 = []
+    if n%6 != 0:
+        for i in range(1,n+1):
+            num1.append(6*i)
+        for m in range(1,7):
+            num2.append(n*m)
+            
+            for l in num1:
+                if l in num2:
+                    return l//6
+    else:
+        return n//6
