@@ -1,0 +1,9 @@
+def solution(num_list):
+    O = []
+    E = []
+    for a in num_list:
+        if a % 2 == 0:
+            E.append(a)
+        else:
+            O.append(a)
+    return [len(E),len(O)]
