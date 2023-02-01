@@ -1,0 +1,10 @@
+def solution(rsp):
+    ans = ''
+    for i in rsp:
+        if i == '0':
+            ans = ans + '5'
+        elif i == '5':
+            ans = ans + '2'
+        else:
+            ans = ans + '0'
+    return ans
