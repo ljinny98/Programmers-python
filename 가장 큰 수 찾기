@@ -1,0 +1,4 @@
+def solution(array):
+    a = max(array)
+    answer = [a,array.index(a)]
+    return answer
