@@ -1,0 +1,5 @@
+def solution(my_string, num1, num2):
+    ans = list(my_string)
+    ans[num1] = my_string[num2]
+    ans[num2] = my_string[num1]
+    return ''.join(ans)
