@@ -1,0 +1,11 @@
+def solution(order):
+    answer = []
+    for i in [int(a) for a in str(order)]:
+        if i%3 == 0:
+            if i == 0:
+                pass
+            else:
+                answer.append(i)
+        else :
+            pass
+    return len(answer)
