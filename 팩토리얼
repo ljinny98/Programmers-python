@@ -1,0 +1,7 @@
+def solution(n):
+    j = 1
+    for i in range(11):
+        j = j*(i+1)
+        if j > n:
+            break
+    return i
