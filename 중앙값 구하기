@@ -1,0 +1,4 @@
+def solution(array):
+    array.sort()
+    i = len(array)
+    return (array[i//2])
