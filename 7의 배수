@@ -1,0 +1,6 @@
+def solution(array):
+    answer = 0
+    for x in array:
+        if '7' in str(x):
+            answer = answer + str(x).count('7')
+    return answer
