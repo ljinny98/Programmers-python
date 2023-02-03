@@ -1,0 +1,6 @@
+def solution(s):
+    answer = ''
+    for a in s:
+        if s.count(a) == 1:
+            answer = answer + a
+    return ''.join(sorted(answer))
