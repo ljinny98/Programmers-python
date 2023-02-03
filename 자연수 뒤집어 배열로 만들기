@@ -1,0 +1,3 @@
+def solution(n):
+    ans = [int(a) for a in str(n)]
+    return ans[::-1]
