@@ -1,0 +1,13 @@
+def solution(id_pw, db):
+    ind = []
+    for i in range(len(db)):
+        ind.append(db[i][0])
+    if id_pw[0] not in ind:
+        return 'fail'
+    else:
+        for j in range(len(db)):
+            if id_pw[0] == db[j][0]:
+                if id_pw[1] == db[j][1]:
+                    return 'login'
+                else:
+                    return 'wrong pw'
