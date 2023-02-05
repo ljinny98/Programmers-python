@@ -1,0 +1,6 @@
+def solution(numbers):
+    num = []
+    for i in range(10):
+        if i not in numbers:
+            num.append(i)
+    return sum(num)
