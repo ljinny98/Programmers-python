@@ -1,0 +1,5 @@
+def solution(my_string):
+    import re
+    num = re.findall('\d+', my_string)
+    num = list(map(int, num))
+    return sum(num)
