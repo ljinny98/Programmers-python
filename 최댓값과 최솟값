@@ -1,0 +1,5 @@
+def solution(s):
+    ans = s.split(' ')
+    answer = list(map(int,ans))
+    answer.sort()
+    return str(answer[0]) +' '+ str(answer[-1])
