@@ -1,0 +1,6 @@
+def solution(price, money, count):
+    mon = price * (count*(count+1)/2)
+    if mon-money > 0:
+        return mon-money
+    else:
+        return 0
