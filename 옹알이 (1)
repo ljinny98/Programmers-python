@@ -1,0 +1,9 @@
+from itertools import permutations as pr
+def solution(babbling):
+    answer = 0
+    bab = ['aya', 'ye', 'woo', 'ma']
+    for i in range (1,5):
+        for b in babbling:
+            if b in [''.join(p) for p in pr(bab,i)]:
+                answer += 1
+    return answer
