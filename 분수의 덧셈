@@ -1,0 +1,5 @@
+def solution(numer1, denom1, numer2, denom2):
+    import fractions
+    a=fractions.Fraction(numer1, denom1)+fractions.Fraction(numer2, denom2)
+    answer=[a.numerator,a.denominator]
+    return answer
