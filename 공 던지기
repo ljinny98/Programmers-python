@@ -1,0 +1,5 @@
+def solution(numbers, k):
+    if (1+2*(k-1)) % len(numbers) == 0:
+        return numbers[-1]
+    else:
+        return (1+2*(k-1))%len(numbers)
