@@ -7,3 +7,14 @@ def solution(n):
     return num[n-1]
 
 #왜인지 3개의 테스트에 런타임 에러로 실패,,
+
+
+def solution(n):
+    num = []
+    for i in range(1,200):
+        if "3" not in str(i):
+            if i%3 != 0:
+                num.append(i)
+    return num[n-1]
+   
+#오히려 범위 넓혔는데 성공함....(응?)
