@@ -1,0 +1,10 @@
+def solution(A, B):
+    answer = 0
+    for i in range(len(A)):
+        if A[len(A)-i:] + A[:len(A)-i] != B:
+            answer += 1
+        else:
+            break
+    if answer >= len(A):
+        answer = -1
+    return answer
