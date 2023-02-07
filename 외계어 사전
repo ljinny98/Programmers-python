@@ -1,0 +1,12 @@
+def solution(spell, dic):
+    from itertools import permutations as pr
+    make = list(pr(spell,len(spell)))
+    fin = [''.join(s) for s in make]
+    answer = 2
+    for i in dic:
+        if i in fin:
+            answer -= 1
+            break
+        else:
+            answer += 0
+    return answer
