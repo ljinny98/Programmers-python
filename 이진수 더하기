@@ -1,0 +1,11 @@
+def solution(bin1, bin2):
+    yi = [0,0]
+    result = []
+    bin1 = [int(a) for a in bin1[::-1]]
+    bin2 = [int(a) for a in bin2[::-1]]
+    for i in range(len(bin1)):
+        yi[0] += bin1[i]*(2**i)
+    for i in range(len(bin2)):
+        yi[1] += bin2[i]*(2**i)
+    sy = sum(yi)
+    return bin(sy)[2:]
