@@ -1,0 +1,12 @@
+def solution(s):
+    low = 'abcdefghijklmnopqrstuvwxyz'
+    new_s = []
+    upper = []
+    for i in s:
+        if i in low:
+            new_s.append(i)
+        else:
+            upper.append(i)
+    new_s.sort(reverse = True)
+    upper.sort(reverse = True)
+    return ''.join(new_s)+''.join(upper)
