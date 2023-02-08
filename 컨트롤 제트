@@ -1,0 +1,10 @@
+def solution(s):
+    ss = s.split(' ')
+    for i in range(len(ss)):
+        if ss[i].isdecimal():
+            ss[i] = int(ss[i])
+        elif ss[i][1:].isdecimal():
+            ss[i] = -int(ss[i][1:])
+        else:
+            ss[i] = -ss[i-1]
+    return sum(ss)
