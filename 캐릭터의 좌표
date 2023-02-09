@@ -1,0 +1,20 @@
+def solution(keyinput, board):
+    origin = [0,0]
+    for a in keyinput:
+        if a == 'left':
+            origin[0] -= 1
+            if origin[0] < -(board[0]//2):
+                origin[0] += 1
+        elif a == 'right':
+            origin[0] += 1
+            if origin[0] > board[0]//2:
+                origin[0] -= 1
+        elif a == 'up':
+            origin[1] += 1
+            if origin[1] > board[1]//2:
+                origin[1] -= 1
+        else:
+            origin[1] -= 1
+            if origin[1] < -(board[1]//2):
+                origin[1] += 1
+    return origin
