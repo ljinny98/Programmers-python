@@ -1,0 +1,26 @@
+def solution(polynomial):
+    answer = polynomial.split(" ")
+    xx = 0
+    num = 0
+    ans = ''
+    for i in range(len(answer)):
+        if answer[i] == 'x':
+            xx += 1
+        elif answer[i][-1] == 'x':
+            xx += int(answer[i][:-1])
+        elif answer[i] != '+':
+            num += int(answer[i])
+    if xx != 0 and num != 0:
+        if xx != 1:
+            return str(xx) + 'x + ' + str(num)
+        elif xx == 1:
+            return 'x + ' + str(num)
+    elif xx == 0 and num != 0:
+        return str(num)
+    elif num == 0:
+        if xx == 1:
+            return 'x'
+        else:
+            return str(xx) + 'x'
+    else:
+        return '0'
