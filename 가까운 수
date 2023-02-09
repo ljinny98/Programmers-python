@@ -1,0 +1,10 @@
+def solution(array, n):
+    array1 = []
+    array.sort()
+    for a in array:
+        if abs(a-n) not in array1:
+            array1.append(abs(a-n))
+        else:
+            array1.append(abs(a-n)+1)
+    n = array1.index(min(array1))
+    return array[n]
