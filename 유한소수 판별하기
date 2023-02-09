@@ -1,0 +1,6 @@
+def solution(a, b):
+    answer = str(a/b)
+    if len(answer) > 11:
+        return 2
+    else:
+        return 1
