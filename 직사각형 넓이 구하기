@@ -1,0 +1,8 @@
+def solution(dots):
+    hor = 0
+    ver = 0
+    x = []
+    for i in range(4):
+        hor += abs(dots[0][0]-dots[i][0])
+        ver += abs(dots[0][1]-dots[i][1])
+    return hor*ver/4
