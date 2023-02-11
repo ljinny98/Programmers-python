@@ -1,0 +1,3 @@
+def solution(n):
+    i=n//2
+    return (i*(i+1))
