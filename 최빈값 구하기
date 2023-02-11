@@ -1,0 +1,10 @@
+def solution(array):
+    max_count = 0
+    answer = 0
+    for i in set(array):
+        if array.count(i) > max_count:
+            max_count = array.count(i)
+            answer = i
+        elif array.count(i) == max_count:
+            answer = -1
+    return answer
