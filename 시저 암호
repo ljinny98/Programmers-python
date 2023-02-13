@@ -1,0 +1,12 @@
+def solution(s, n):
+    up = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    low = up.lower()
+    answer = ''
+    for a in range(len(s)):
+        if s[a] in up:
+            answer += up[(up.index(s[a])+n)%26]
+        elif s[a] in low:
+            answer += low[(low.index(s[a])+n)%26]
+        else:
+            answer += ' '
+    return answer
