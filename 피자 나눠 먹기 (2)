@@ -12,3 +12,9 @@ def solution(n):
                     return l//6
     else:
         return n//6
+
+#다른 풀이 (1)
+import math
+
+def solution(n):
+    return (n * 6) // math.gcd(n, 6) // 6
