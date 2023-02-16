@@ -1,0 +1,9 @@
+def solution(quiz):
+    answer = []
+    for a in range(len(quiz)):
+        new = quiz[a].split("=")
+        if eval(new[0]) == int(new[1]):
+            answer.append("O")
+        else:
+            answer.append("X")
+    return answer
