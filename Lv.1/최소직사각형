@@ -1,0 +1,10 @@
+def solution(sizes):
+    ga = 0
+    se = 0
+    for i in range(len(sizes)):
+        if max(sizes[i]) > ga:
+            ga = max(sizes[i])
+    for i in range(len(sizes)):
+        if min(sizes[i]) > se:
+            se = min(sizes[i])
+    return ga*se
