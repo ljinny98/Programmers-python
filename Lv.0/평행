@@ -1,0 +1,11 @@
+def solution(dots):
+    answer = 0
+    com = [(0,1,2,3),(0,2,1,3),(0,3,1,2)]
+    for a in range(3):
+        sl1 = (dots[com[a][0]][1]-dots[com[a][1]][1])/(dots[com[a][0]][0]-dots[com[a][1]][0])
+        sl2 = (dots[com[a][2]][1]-dots[com[a][3]][1])/(dots[com[a][2]][0]-dots[com[a][3]][0])
+        print(sl1,sl2)
+        if sl1 == sl2:
+            answer = 1
+            break
+    return answer
