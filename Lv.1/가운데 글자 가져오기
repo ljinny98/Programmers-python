@@ -1,0 +1,6 @@
+def solution(s):
+    sl = len(s)
+    if sl % 2 == 0:
+        return s[sl//2-1:sl//2+1]
+    else:
+        return s[sl//2]
