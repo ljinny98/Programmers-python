@@ -1,0 +1,14 @@
+def solution(lines):
+    line = {}
+    answer = 0
+    x = [lines[x][0] for x in range(3)]
+    y = [lines[y][1] for y in range(3)]
+    for i in range(min(x),max(y)):
+        line[str(i)] = 0
+    for j in range(len(lines)):
+        for k in range(lines[j][0],lines[j][1]):
+            line[str(k)] = int(line[str(k)])+1
+    for fin in line:
+        if line[fin] > 1:
+            answer += 1
+    return answer
