@@ -1,0 +1,7 @@
+def solution(score):
+    answer = []
+    new = [(score[i][0]+score[i][1])/2 for i in range(len(score))]
+    arr_new = sorted(new,reverse = True)
+    for i in new:
+        answer.append(arr_new.index(i)+1)
+    return answer
