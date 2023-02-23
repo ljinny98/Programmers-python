@@ -1,0 +1,15 @@
+def solution(numlist, n):
+    answer = []
+    gap = list(abs(i-n)for i in numlist)
+    gap.sort()
+    for a in range(0,len(gap)):
+        if gap.count(gap[a]) == 1:
+                if n+gap[a] in numlist:
+                    answer.append(n+gap[a])
+                else:
+                    answer.append(n-gap[a])
+        elif gap[a] == gap[a+1]:
+            answer.append(n+gap[a])
+        else:
+            answer.append(n-gap[a])
+    return answer
