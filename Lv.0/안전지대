@@ -1,0 +1,18 @@
+def solution(board):
+    bomb = []
+    danger = []
+    n = len(board)
+    for i in range(n):
+        for j in range(n):
+            if board[i][j] == 1:
+                bomb.append([i+1,j+1])
+    for a in bomb:
+        for dx in range(-1,2):
+            for dy in range(-1,2):
+                new = [a[0]+dx, a[1]+dy]
+                danger.append(new)
+    for i in danger:
+        if i[0] in range(1,n+1) and i[1] in range(1,n+1) and i not in bomb:
+            bomb.append(i)
+    answer = (n*n)-len(bomb)
+    return answer
