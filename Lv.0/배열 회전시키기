@@ -1,0 +1,9 @@
+def solution(numbers, direction):
+    n = len(numbers)
+    if direction == 'right':
+        numbers.insert(0,numbers[n-1])
+        del numbers[n]
+    else:
+        numbers.append(numbers[0])
+        del numbers[0]
+    return numbers
