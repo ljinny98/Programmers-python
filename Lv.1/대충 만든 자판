@@ -1,0 +1,20 @@
+def solution(keymap, targets):
+    dic = {}
+    c = 0
+    answer = []
+    for i in range(len(keymap)):
+        for a in range(len(keymap[i])):
+            if keymap[i][a] not in dic:
+                dic.update({keymap[i][a]:a+1})
+            elif a < dic[keymap[i][a]]:
+                dic.update({keymap[i][a]:a+1})
+    for j in range(len(targets)):
+        for b in range(len(targets[j])):
+            if targets[j][b] not in dic:
+                c = -1
+                break
+            else:
+                c += int(dic[targets[j][b]])
+        answer.append(c)
+        c = 0
+    return answer
