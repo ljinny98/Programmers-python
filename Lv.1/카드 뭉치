@@ -1,0 +1,22 @@
+def solution(cards1, cards2, goal):
+    count = 0
+    for a in goal:
+        if len(cards1) == 0:
+            pass
+        else:
+            if a == cards1[0]:
+                pass
+                cards1.remove(a)
+                count += 1
+    for b in goal:
+        if len(cards2) == 0:
+            pass
+        else:     
+            if b == cards2[0]:
+                cards2.remove(b)
+                count += 1
+    if count == len(goal):
+        answer = 'Yes'
+    else:
+        answer = 'No'
+    return answer
