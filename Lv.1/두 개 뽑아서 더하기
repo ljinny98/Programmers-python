@@ -1,0 +1,9 @@
+import itertools as it
+def solution(numbers):
+    answer = []
+    com = list(it.combinations(numbers,2))
+    for a in range(len(com)):
+        if sum(com[a]) not in answer:
+            answer.append(sum(com[a]))
+    answer.sort()
+    return answer
