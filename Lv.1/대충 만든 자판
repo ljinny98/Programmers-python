@@ -18,3 +18,25 @@ def solution(keymap, targets):
         answer.append(c)
         c = 0
     return answer
+
+
+#another solution
+
+def solution(keymap, targets):
+    kdist = dict()
+    for s in keymap :
+        for i in range(len(s)) :
+            kdist.setdefault(s[i],100)
+            kdist[s[i]] = min(kdist[s[i]],i+1)
+    ans = []
+    for s in targets :
+        cnt = 0
+        flag=0
+        for i in range(len(s)) :
+            if s[i] not in kdist :
+                flag=1
+                break
+            cnt += kdist[s[i]]
+        if flag==1 : ans.append(-1)
+        else : ans.append(cnt)
+    return 
