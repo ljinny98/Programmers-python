@@ -4,3 +4,8 @@ def solution(a, b, n):
         ans += (n//a)*b
         n = n%a + (n//a)*b
     return ans
+
+
+#another solution
+
+solution = lambda a, b, n: max(n - b, 0) // (a - b) * b
